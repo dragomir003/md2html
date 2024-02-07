@@ -16,21 +16,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Haskell Install
-      runs-on: "ubuntu-latest"
-
-      steps:
-      - name: Check Haskel version
-        run: |
-          ghcup --version
-          ghc --version
-      - name: Install Haskel and Cabal
-        run: |
-          ghcup install ghc "9.4.7"
-          ghcup install cabal "3.6.2.1"
-      - name: Check Haskel version
-        run: ghc --version
-      - name: Check Cabal version
-        run: cabal --version
+      run: |
+        ghcup --version
+        ghc --version
+        ghcup install ghc "9.4.7"
+        ghcup install cabal "3.6.2.1"
+        ghc --version
+        cabal --version
 
     - name: Cache
       uses: actions/cache@v3
