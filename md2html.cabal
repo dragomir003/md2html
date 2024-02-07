@@ -3,16 +3,16 @@ name:               md2html
 version:            0.1.0.0
 
 -- A short (one-line) description of the package.
--- synopsis:
+synopsis: Simple Markdown to HTML converter
 
 -- A longer description of the package.
--- description:
+description: This is a practice project.
 
 -- A URL where users can report bugs.
 -- bug-reports:
 
 -- The license under which the package is released.
--- license:
+license: MIT
 author:             dragomir003
 maintainer:         dragolekovic@gmail.com
 
