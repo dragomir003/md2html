@@ -10,16 +10,29 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  haskel_install:
+    runs-on: "ubuntu-latest"
 
+    steps:
+    - name: Check Haskel version
+      run: |
+        ghcup --version
+        ghc --version
+    - name: Install Haskel and Cabal
+      run: |
+        ghcup install ghc "9.4.7"
+        ghcup install cabal "3.6.2.1"
+    - name: Check Haskel version
+      run: ghc --version
+    - name: Check Cabal version
+      run: cabal --version
+
+  build:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: haskell-install
     - uses: actions/checkout@v3
-    - uses: actions/setup-haskell@v1
-      with:
-        ghc-version: '9.4'
-        cabal-version: '3.6'
 
     - name: Cache
       uses: actions/cache@v3
