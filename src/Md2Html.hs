@@ -1,4 +1,6 @@
-module Md2Html (someFunc) where
+module Md2Html (md2ast) where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+import MdParser
+
+md2ast :: String -> Either String String
+md2ast = undefined

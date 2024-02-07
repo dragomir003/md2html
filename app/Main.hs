@@ -1,8 +1,6 @@
 module Main where
 
-import qualified Md2Html (someFunc)
+import qualified Md2Html
 
 main :: IO ()
-main = do
-  putStrLn "Hello, Haskell!"
-  Md2Html.someFunc
+main = putStrLn "Hello, Haskell!"
