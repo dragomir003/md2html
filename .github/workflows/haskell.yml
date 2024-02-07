@@ -15,12 +15,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Haskell Install
       run: |
         ghcup --version
         ghc --version
         ghcup install ghc "9.4.7"
-        ghcup install cabal "3.6.2.1"
+        ghcup install cabal "3.6.2"
         ghc --version
         cabal --version
 
